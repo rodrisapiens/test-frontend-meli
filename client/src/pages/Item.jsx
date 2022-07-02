@@ -17,8 +17,18 @@ function Item() {
         setData(res);
       });
   }, []);
-  function dataSlice() {
-    return "00";
+  function dataSlice(num) {
+    const number = num * 100;
+    console.log(number, "number");
+    if (number <= 0) {
+      return "00";
+    }
+    if (number > 0 && number < 10) {
+      return `0${Math.floor(number)}`;
+    }
+    if (number >= 10) {
+      return `${Math.floor(number)}`;
+    }
   }
   return (
     <div className="itemPage">
