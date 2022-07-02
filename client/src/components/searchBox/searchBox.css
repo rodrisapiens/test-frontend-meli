@@ -1,0 +1,88 @@
+.SearchBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffe600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  padding: 0.6rem;
+  padding-inline: 11vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.meliIcon {
+  height: 2.3rem;
+  cursor: pointer;
+}
+
+.inputAndButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.searchInput {
+  height: 2.3rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px 0px 0px 5px;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.searchInput::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.searchInput:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.searchInput::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.searchBtn {
+  height: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  height: 2.3rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  cursor: pointer;
+}
+/*# sourceMappingURL=searchBox.css.map */

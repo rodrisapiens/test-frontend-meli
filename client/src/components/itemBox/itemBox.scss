@@ -1,0 +1,36 @@
+.itemBox {
+    width: 100%;
+    display: flex;
+    border-bottom: solid rgba(0, 0, 0, 0.1);
+    border-width: thin;
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+}
+.itemBox:last-child {
+    border: none;
+}
+.productInfo {
+    display: grid;
+    width: 30rem;
+    align-content: baseline;
+    gap: 1rem;
+    justify-items: baseline;
+}
+.priceAndShipping {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5rem;
+}
+.itemPicture {
+    height: 10rem;
+}
+.price {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.itemBoxTitle {
+    font-size: 18px;
+    font-weight: 400;
+}

@@ -1,0 +1,53 @@
+.itemBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid rgba(0, 0, 0, 0.1);
+  border-width: thin;
+  padding: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.itemBox:last-child {
+  border: none;
+}
+
+.productInfo {
+  display: -ms-grid;
+  display: grid;
+  width: 30rem;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+  gap: 1rem;
+  justify-items: baseline;
+}
+
+.priceAndShipping {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.itemPicture {
+  height: 10rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.itemBoxTitle {
+  font-size: 18px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=itemBox.css.map */

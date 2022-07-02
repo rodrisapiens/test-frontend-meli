@@ -1,22 +1,20 @@
-import { useState, useEffect } from "react";
-import "./App.css";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import DashBoard from "./pages/DashBoard";
+import Item from "./pages/Item";
+import { QueryProvider } from "./QueryContext";
+import "../src/styles/app.css";
 function App() {
-  const [data, setData] = useState();
-  useEffect(() => {
-    fetch("http://localhost:8080/?q=perros")
-      .then((response) => {
-        return response.json();
-      })
-      .then((res) => {
-        setData(res.items[0].title);
-        console.log(res);
-      });
-  }, []);
   return (
-    <div className="App">
-      <h1>{data && data}</h1>
-    </div>
+    <QueryProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/items" element={<DashBoard />} />
+          <Route path="/items/:id" element={<Item />} />
+        </Routes>
+      </Router>
+    </QueryProvider>
   );
 }
 

@@ -1,0 +1,40 @@
+.dashBoardPage {
+    width: 100%;
+    display: grid;
+    height: 100vh;
+}
+.dashBoard {
+    padding-inline: 11vw;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    padding: 0.5rem;
+}
+.dashBoardConteiner {
+    padding-inline: 11vw;
+    padding-bottom: 11vw;
+}
+.categoriesConteiner {
+    display: flex;
+    padding-inline: 11vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: left;
+    gap: 1rem;
+}
+.categorie {
+    color: gray;
+}
+.itemBoxBtn {
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    border: none;
+    border-bottom: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-bottom-width: thin;
+}
+.itemBoxBtn:last-child {
+    border-bottom: none;
+}
