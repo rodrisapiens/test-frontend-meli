@@ -17,6 +17,9 @@ function Item() {
         setData(res);
       });
   }, []);
+  function dataSlice() {
+    return "00";
+  }
   return (
     <div className="itemPage">
       <SearchBox defaultValue={query} id={id} />
@@ -49,7 +52,7 @@ function Item() {
                   .format(Math.floor(data?.item.price.amount))
                   .replace(/,/g, ".")}
               </h1>
-              <p className="decimals">{data?.item.price.decimals}</p>
+              <p className="decimals">{dataSlice(data?.item.price.decimals)}</p>
             </div>
             <button
               className="buyBtn"
