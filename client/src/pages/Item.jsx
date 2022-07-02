@@ -9,7 +9,7 @@ function Item() {
   let { query, setQuery } = useQuery;
   const [data, setData] = useState();
   useEffect(() => {
-    fetch(`http://localhost:8080/${id}`)
+    fetch(`http://localhost:8080/api/items/${id}`)
       .then((response) => {
         return response.json();
       })
@@ -19,7 +19,6 @@ function Item() {
   }, []);
   function dataSlice(num) {
     const number = num * 100;
-    console.log(number, "number");
     if (number <= 0) {
       return "00";
     }

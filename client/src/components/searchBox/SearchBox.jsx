@@ -5,7 +5,6 @@ import searchIcon from "../../../images/ic_Search.png";
 import meliIcon from "../../../images/Logo_ML_Big.png";
 import "./searchBox.css";
 function SearchBox(id) {
-  const [searchParams, setSearchParams] = useSearchParams();
   const { query, setQuery } = useQuery();
   let navigate = useNavigate();
   useEffect(() => {
@@ -25,7 +24,6 @@ function SearchBox(id) {
       if (!location.href.includes("/items")) {
         navigate("/items", { replace: true });
       } else if (id.id) {
-        console.log("id:", id.id);
         navigate("/items", { replace: true });
       }
     }

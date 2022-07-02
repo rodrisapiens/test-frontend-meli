@@ -15,8 +15,8 @@ function fetchData(req, res, next) {
       .then((data) => {
         return data.json();
       })
-      .then((datita) => {
-        res.data = datita;
+      .then((data) => {
+        res.data = data;
         next();
       })
       .catch((error) => {
@@ -136,8 +136,8 @@ function OrderAndSend(req, res) {
     res.send(sendingObject);
   }
 }
-app.get("/", fetchData, filterData, OrderAndSend);
-app.get("/:id", fetchData, filterData, OrderAndSend);
+app.get("/api/items", fetchData, filterData, OrderAndSend);
+app.get("/api/items/:id", fetchData, filterData, OrderAndSend);
 app.listen(PORT, () => {
   console.log(`listening to port: ${PORT}!`);
 });

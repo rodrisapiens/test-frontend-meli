@@ -13,10 +13,11 @@ function DashBoard() {
   useEffect(() => {
     const serchParamsQuery = searchParams.get("search");
     if (query !== "") {
-      console.log("holaaa");
       setSearchParams({ search: query });
     }
-    fetch(`http://localhost:8080/?q=${query ? query : serchParamsQuery}`)
+    fetch(
+      `http://localhost:8080/api/items?q=${query ? query : serchParamsQuery}`
+    )
       .then((response) => {
         return response.json();
       })
