@@ -17,40 +17,48 @@ function Item() {
         setData(res);
       });
   }, []);
-
   return (
     <div className="itemPage">
-      <SearchBox defaultValue={query} />
+      <SearchBox defaultValue={query} id={id} />
       <Categories categories={[]} />
       <div className="itemConteiner">
         <div className="itemBlank">
-          <div className="top">
-            <img
-              src={data?.item.picture}
-              alt="bigProductImage"
-              className="bigProductImage"
-            />
-            <div className="topRigth">
-              <p>
-                {data?.item.condition === "new" ? "Nuevo" : "Usado"}-
-                {data?.item.sold_quantity} Vendidos
-              </p>
-              <h1 className="productTitle">{data?.item.title}</h1>
-              <div className="priceAndDecimals">
-                <h1 className="bigProductPrice">
-                  ${" "}
-                  {Intl.NumberFormat()
-                    .format(Math.floor(data?.item.price.amount))
-                    .replace(/,/g, ".")}
-                </h1>
-                <p className="decimals">{data?.item.price.decimals}</p>
-              </div>
-              <button className="buyBtn">Comprar</button>
+          <div className="left">
+            <div className="topLeft">
+              <img
+                src={data?.item.picture}
+                alt="bigProductImage"
+                className="bigProductImage"
+              />
+            </div>
+            <div className="bottomLeft">
+              <h2 className="descriptionTitle">Descripción del producto</h2>
+              <p className="description">{data?.item.description}</p>
             </div>
           </div>
-          <div className="bottom">
-            <h2 className="descriptionTitle">Descripción del producto</h2>
-            <p className="description">{data?.item.description}</p>
+          <div className="rigth">
+            <p>
+              {data?.item.condition === "new" ? "Nuevo" : "Usado"}-
+              {data?.item.sold_quantity} Vendidos
+            </p>
+            <h1 className="productTitle">{data?.item.title}</h1>
+            <div className="priceAndDecimals">
+              <h1 className="bigProductPrice">
+                ${" "}
+                {Intl.NumberFormat()
+                  .format(Math.floor(data?.item.price.amount))
+                  .replace(/,/g, ".")}
+              </h1>
+              <p className="decimals">{data?.item.price.decimals}</p>
+            </div>
+            <button
+              className="buyBtn"
+              onClick={() => {
+                alert("gracias por comprar!! :)");
+              }}
+            >
+              Comprar
+            </button>
           </div>
         </div>
       </div>

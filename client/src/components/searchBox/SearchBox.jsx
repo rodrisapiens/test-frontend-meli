@@ -4,7 +4,7 @@ import { useQuery } from "../../QueryContext";
 import searchIcon from "../../../images/ic_Search.png";
 import meliIcon from "../../../images/Logo_ML_Big.png";
 import "./searchBox.css";
-function SearchBox(defaultValue) {
+function SearchBox(id) {
   const [searchParams, setSearchParams] = useSearchParams();
   const { query, setQuery } = useQuery();
   let navigate = useNavigate();
@@ -20,8 +20,12 @@ function SearchBox(defaultValue) {
   async function handleSearch() {
     const inputValue = document.querySelector(".searchInput").value;
     if (inputValue !== "") {
+      console.log("chau");
       setQuery(inputValue);
       if (!location.href.includes("/items")) {
+        navigate("/items", { replace: true, state: { query: inputValue } });
+      }
+      if (id) {
         navigate("/items", { replace: true, state: { query: inputValue } });
       }
     }

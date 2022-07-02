@@ -100,7 +100,7 @@ function filterData(req, res, next) {
             amount: res.data.price,
             decimals: res.data.price % 1,
           },
-          picture: res.data.thumbnail,
+          picture: res.data.pictures[0].url,
           condition: res.data.condition,
           free_shipping: res.data.shipping.free_shipping,
           sold_quantity: res.data.sold_quantity,
