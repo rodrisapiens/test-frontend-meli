@@ -52,7 +52,7 @@
 .bottomLeft {
   display: -ms-grid;
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .buyBtn {
@@ -93,5 +93,14 @@
 
 .decimals {
   margin-top: 0.5rem;
+}
+
+.descriptionTitle {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.description {
+  color: rgba(0, 0, 0, 0.4);
 }
 /*# sourceMappingURL=item.css.map */

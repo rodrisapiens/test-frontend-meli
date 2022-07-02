@@ -24,8 +24,8 @@ function SearchBox(id) {
       setQuery(inputValue);
       if (!location.href.includes("/items")) {
         navigate("/items", { replace: true });
-      } else if (id) {
-        console.log("id:", id);
+      } else if (id.id) {
+        console.log("id:", id.id);
         navigate("/items", { replace: true });
       }
     }

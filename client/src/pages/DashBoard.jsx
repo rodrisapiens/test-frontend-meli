@@ -26,7 +26,7 @@ function DashBoard() {
       .catch((err) => {
         console.log(err);
       });
-  }, [query]);
+  }, [query || searchParams.get("search")]);
   function handleClick(id) {
     navigate(`/items/${id}`, {
       replace: true,
