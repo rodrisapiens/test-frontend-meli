@@ -10,23 +10,23 @@ function SearchBox(id) {
   let navigate = useNavigate();
   useEffect(() => {
     const searchInput = document.querySelector(".searchInput");
+    const button = document.querySelector(".searchBtn");
     searchInput.focus();
     window.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
-        handleSearch();
+        button.click();
       }
     });
   }, []);
   async function handleSearch() {
     const inputValue = document.querySelector(".searchInput").value;
     if (inputValue !== "") {
-      console.log("chau");
       setQuery(inputValue);
       if (!location.href.includes("/items")) {
-        navigate("/items", { replace: true, state: { query: inputValue } });
-      }
-      if (id) {
-        navigate("/items", { replace: true, state: { query: inputValue } });
+        navigate("/items", { replace: true });
+      } else if (id) {
+        console.log("id:", id);
+        navigate("/items", { replace: true });
       }
     }
   }

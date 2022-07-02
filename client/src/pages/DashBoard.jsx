@@ -13,6 +13,7 @@ function DashBoard() {
   useEffect(() => {
     const serchParamsQuery = searchParams.get("search");
     if (query !== "") {
+      console.log("holaaa");
       setSearchParams({ search: query });
     }
     fetch(`http://localhost:8080/?q=${query ? query : serchParamsQuery}`)
@@ -29,7 +30,6 @@ function DashBoard() {
   function handleClick(id) {
     navigate(`/items/${id}`, {
       replace: true,
-      state: { categories: data.categories },
     });
   }
   return (
